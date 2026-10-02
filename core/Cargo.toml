@@ -128,7 +128,7 @@ uuid = { version = "1.11.0", features = ["v4", "v5", "v7"], optional = true }
 tempfile = { workspace = true }
 pack1 = { version = "1.0.0", features = ["bytemuck"] }
 bytemuck = "1.23.1"
-aes-gcm = { version = "0.10.3" }
+aes-gcm = { version = "0.11.1", features = ["getrandom"] }
 aes = { version = "0.8.4" }
 turso_parser = { workspace = true }
 twox-hash = "2.1.1"
@@ -154,7 +154,7 @@ stacker = { version = "0.1", optional = true }
 simsimd = { version = "6.5.3", optional = true }
 
 [target.'cfg(all(target_arch = "wasm32", target_os = "unknown"))'.dependencies]
-getrandom = "0.4" # = { package = "getrandom", version = "0.4" }
+getrandom = "0.4"
 uuid = { version = "1.11.0", features = ["js"], optional = true }
 
 [target.'cfg(antithesis)'.dependencies]
